@@ -8,9 +8,24 @@
     <script src="angular.js"></script>
     <script src="./app.js"></script>	
     <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
         .message {
             font-size: 1.3em;
             font-weight: bold;
+            color: green;
+        }
+
+        div.no-data {
+            color: red;
+        }
+        input[type='text'].ok-data {
+            border: 1px solid green;
+        }
+        input[type='text'].no-data{
+            border: 1px solid red;
         }
     </style>
     <title>Lunch Checker</title>
@@ -24,7 +39,7 @@
                 id="lunch-menu"
                 type="text"
                 placeholder="list comma separated dishes you usually have for lunch"
-                class="form-control"
+                class="form-control {{textClass}}"
                 ng-model = "text"
                 />
             </div>
@@ -32,7 +47,7 @@
                 <button ng-click = "eventClick();" class="btn btn-default">Check If Too Much</button>
                 <p>Note: empty items will be remove.</p>
             </div>
-            <div class="form-group message">
+            <div class="form-group message {{messageClass}}">
                 <!-- Your message can go here. -->
                 {{message}}
             </div>

@@ -2,15 +2,25 @@
     'use strict';
 
     angular.module("LunchCheck", [])
-    .controller("LunchCheckController", function($scope) {
+    .controller("LunchCheckController", DILunchCheckController );
 
+    DILunchCheckController.$inject = ['$scope'];
+
+    function DILunchCheckController ($scope) {
         $scope.text = "";
         $scope.eventClick = function () {
             $scope.message = displayMessage($scope.text);
-        }
-        
-    });
-    
+            switch ($scope.message) {
+                case NO_DATA:
+                    $scope.messageClass = "no-data";
+                    $scope.textClass = "no-data";
+                    break;
+                default:
+                    $scope.messageClass = "";
+                    $scope.textClass = "ok-data";
+            }
+        };
+    }
 
     const ENJOY = "Enjoy!";
     const TOO_MUCH = "Too much!";

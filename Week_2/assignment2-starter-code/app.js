@@ -71,13 +71,13 @@
         shoppingListService.emptyBuyList = function() {
             if(shoppingListService.buyList.length > 0){
                 // has elements
-                return true;
+                return false;
             }
             // array is empty
-            return false;
+            return true;
         }
 
-        shoppingListService.emptyBoughtList = () => { return shoppingListService.boughtList.length > 0 ? true : false };
+        shoppingListService.emptyBoughtList = () => { return shoppingListService.boughtList.length > 0 ? false : true };
 
 	}
 })();

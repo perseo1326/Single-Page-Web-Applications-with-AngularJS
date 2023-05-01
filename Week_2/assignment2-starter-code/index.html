@@ -42,7 +42,7 @@
 							</button>
 						</li>
 					</ul>
-					<div ng-show="!buyItem.isEmptyList()" class="emptyMessage">Everything is bought!</div>
+					<div ng-if="buyItem.isEmptyList()" class="emptyMessage">Everything is bought!</div>
 				</div>
 
 				<!-- Already Bought List -->
@@ -52,7 +52,7 @@
 						<li ng-repeat="item in boughtItem.boughtList">
 							Bought {{item.quantity}} {{item.name}}</li>
 					</ul>
-					<div ng-hide="boughtItem.isEmptyList()" class="emptyMessage">Nothing bought yet.</div>
+					<div ng-if="boughtItem.isEmptyList()" class="emptyMessage">Nothing bought yet.</div>
 				</div>
 			</div>
 		</div>

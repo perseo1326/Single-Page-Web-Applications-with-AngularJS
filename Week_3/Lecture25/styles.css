@@ -11,3 +11,34 @@ body {
 .error {
   color: red;
 }
+
+div.caja {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  display: inline-block;
+
+  width: 100%;
+}
+
+div.category {
+  background-color: lightgreen;
+  padding: 1em;
+}
+
+div.category:hover {
+  background-color: lightblue;
+}
+
+div.show-category {
+  padding: 1em;
+  background-color: beige;
+}
+
+div img {
+  width: 50%;
+  height: auto;
+}

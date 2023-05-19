@@ -1,24 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Narrow Down Your Menu Choice</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/styles.css">
-  </head>
-<body>
-   <div class="container">
-    <h1>Narrow Down Your Chinese Menu Choice</h1>
+	<head>
+		<title>Narrow Down Your Menu Choice</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="styles/bootstrap.min.css" />
+		<link rel="stylesheet" href="styles/styles.css" />
+        <script src="./angular.js"></script>
+        <script src="./app.js"></script>
+		<title>Module 3 Assignment - NarrowItDownApp</title>
+	</head>
+	<body ng-app="NarrowItDownApp">
+		<div class="container" ng-controller="NarrowItDownController as items">
+			<h1>Narrow Down Your Chinese Menu Choice</h1>
 
-    <div class="form-group">
-      <input type="text" placeholder="search term" class="form-control">
-    </div>
-    <div class="form-group narrow-button">
-      <button class="btn btn-primary">Narrow It Down For Me!</button>
-    </div>
+			<!-- <div ng-controller="NarrowItDownController as items"> -->
+			<div>
+				<div class="form-group">
+					<input
+					type="text"
+					placeholder="search term"
+					class="form-control"
+					ng-model = "items.text"/>
+				</div>
+				<div class="form-group narrow-button">
+					<button class="btn btn-primary" ng-click="items.searchText();">Narrow It Down For Me!</button>
+				</div>
+				<div> {{items.x}}</div>
+			</div>
 
-    <found-items found-items="...." on-remove="...."></found-items>
-  </div>
-
-</body>
+			<found-items found-items="...." on-remove="....">listado de items encontrados!</found-items>
+		</div>
+	</body>
 </html>

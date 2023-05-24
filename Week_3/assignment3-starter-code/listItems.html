@@ -1,0 +1,28 @@
+
+<div class="clearfix">
+    <h3> {{ products.myTitle }} </h3>
+    <!-- <hr><br> -->
+    <!-- <div>{{ products }}</div> -->
+
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Short Name</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="item in products.list">
+            <td> {{ $index + 1 }} </td>
+            <td> {{ item.short_name }} </td>
+            <td> {{ item.name}} </td>
+            <td> {{ item.description }} </td>
+            <td>
+                <button class="btn btn-primary" ng-click="products.myRemove({ index : $index } )">Don't want this one!</button>
+            </td>
+
+        </tr>
+    </table>
+    <div class="error" ng-if="products.showError(products.activeErrorMessage)">Nothing Found.</div>
+
+</div>

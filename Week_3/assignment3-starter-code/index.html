@@ -13,8 +13,7 @@
 		<div class="container" ng-controller="NarrowItDownController as items">
 			<h1>Narrow Down Your Chinese Menu Choice</h1>
 
-			<!-- <div ng-controller="NarrowItDownController as items"> -->
-			<div>
+			<div class="">
 				<div class="form-group">
 					<input
 					type="text"
@@ -25,10 +24,11 @@
 				<div class="form-group narrow-button">
 					<button class="btn btn-primary" ng-click="items.searchText();">Narrow It Down For Me!</button>
 				</div>
-				<div> {{items.x}}</div>
 			</div>
 
-			<found-items found-items="...." on-remove="....">listado de items encontrados!</found-items>
+			<div class="clearfix">
+				<found-items my-products="items.found" title="{{ items.title }}" on-remove="items.removeItem(index)" error-message-is-active="items.active "></found-items>
+			</div>
 		</div>
 	</body>
 </html>

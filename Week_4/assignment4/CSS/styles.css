@@ -1,0 +1,120 @@
+
+
+root, * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;	
+	font-size: 18px;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+div.document {
+	margin: auto;
+	width: 80%;
+	padding: 0 0.5em;
+}
+
+h1 {
+	display: block;
+	text-align: center;
+	padding: 0.5em;
+	font-size: 2em;
+	color: #21005b;
+}
+
+h2 {
+	margin-bottom: 0.5em;
+	padding: 0.5em 0;
+	color: #E09616;
+}
+
+p {
+	margin-bottom: 0.3em;
+	font-style: italic;
+	color: #16E06B;
+}
+
+div.tabs {
+	display: block;
+	margin-bottom: 0.5em;
+}
+
+div.section {
+	display: block;
+	padding: 0 0.5em;
+	background-color:#4b0082;
+	color: aliceblue;
+	min-height: 300px;
+}
+
+div.tabs a {
+	display: inline-block;
+	background-color: orangered;
+	color:whitesmoke;
+	padding: 0.5em;
+	cursor: pointer;
+}
+
+div.tabs a.active-tab {
+	font-weight: bolder;
+	background-color: whitesmoke;
+	color: orangered;
+	box-shadow: 3px 3px gray;
+	border: 1px solid black;
+}
+
+button {
+	margin: auto;
+	padding: 0.5em 1em;
+	display: block;
+	background-color: #d6bfff;
+	color : #21005b;
+	font-weight: bolder;
+}
+
+li {
+	display: inline-block;
+	padding: 0.2em;
+	margin: 0.2em;
+	background-color: #d6bfff;
+	color: #21005b;
+}
+
+li:hover {
+	background-color: #ad80ff;
+	color: whitesmoke;
+}
+
+item div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+item div:hover {
+	color: #E09616;
+}
+
+item div span {
+	display: block;
+	padding: 0.2em 0;
+	margin-bottom: 0.2em;
+}
+
+item span.description {
+	display: none;
+	background-color: #d6bfff;
+	color: black;
+	padding: 0.2em;
+	margin-left: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+
+	div.document {
+		/* margin: auto; */
+		width: 100%;
+		/* padding: 0 0.5em; */
+	}
+
+}

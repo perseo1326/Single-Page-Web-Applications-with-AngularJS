@@ -1,0 +1,6 @@
+<div class="section">
+    <h2>Category: {{ items.category }}</h2>
+    <p>Total dishes in this category: {{ items.total }}</p>
+
+    <item ng-repeat="dish in items.dishes" index="{{ $index + 1 }}" my-dish="dish" ng-click="items.toggleClass(dish)"></item>
+</div>
